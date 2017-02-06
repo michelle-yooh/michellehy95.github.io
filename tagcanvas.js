@@ -829,15 +829,6 @@ function TouchMove(e) {
     tc.drawn = 0;
   }
 }
-function MouseWheel(e) {
-  var t = TagCanvas, tg = EventToCanvasId(e);
-  if(tg && t.tc[tg]) {
-    e.cancelBubble = true;
-    e.returnValue = false;
-    e.preventDefault && e.preventDefault();
-    t.tc[tg].Wheel((e.wheelDelta || e.detail) > 0);
-  }
-}
 function Scroll(e) {
   var i, t = TagCanvas;
   clearTimeout(t.scrollTimer);
@@ -1517,10 +1508,6 @@ function TagCanvas(cid,lctr,opt) {
     if(this.dragControl) {
       handlers[cid].push(['mousedown', MouseDown]);
       handlers[cid].push(['selectstart', Nop]);
-    }
-    if(this.wheelZoom) {
-      handlers[cid].push(['mousewheel', MouseWheel]);
-      handlers[cid].push(['DOMMouseScroll', MouseWheel]);
     }
     if(this.scrollPause) {
       handlers[cid].push(['scroll', Scroll, window]);

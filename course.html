@@ -21,7 +21,7 @@ body {font-family: "Lato", sans-serif}
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
   </li>
-  <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
+  <li><a href="index.html" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
   <li class="w3-hide-small"><a href="index.html#about" class="w3-padding-large">ABOUT</a></li>
   <li class="w3-hide-small"><a href="index.html#experience" class="w3-padding-large">EXPERIENCE</a></li>
   <li class="w3-hide-small"><a href="index.html#project" class="w3-padding-large">PROJECTS</a></li>
@@ -60,59 +60,113 @@ body {font-family: "Lato", sans-serif}
 
         <!-- first button -->
         <div class="w3-accordion w3-light-grey">
-          <button onclick="myFunction2('section1')" class="w3-btn-block w3-left-align">
-          Open Section 1
+          <button onclick="myFunction2('section1')" class="w3-btn-block w3-left-align w3-black">
+            <p class="w3-large w3-text-light-grey"><i class="fa fa-book fa-fw w3-xlarge w3-text-teal"></i>     Courses taken at UWaterloo <i class="fa fa-bars fa-fw w3-xlarge w3-text-white w3-right"></i></p>
           </button>
             <div class="w3-accordion-content w3-container" id="section1">
-              <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+              <!-- CS Courses -->
+              <br><h4 class="w3-wide w3-center">&ltComputer Science&gt</h4><br>
+              <div class="w3-row-padding w3-padding-8" style="margin:0 -16px">
                 <div class="w3-third w3-margin-bottom">
                   <div class="w3-container w3-white">
-                    <p><b>New York</b></p>
-                    <p class="w3-opacity">Fri 27 Nov 2016</p>
-                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <p><b>CS240</b></p>
+                    <p class="w3-opacity">Data Structures and Data Management</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs240').style.display='block'">View</button>
                   </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
                   <div class="w3-container w3-white">
-                    <p><b>Paris</b></p>
-                    <p class="w3-opacity">Sat 28 Nov 2016</p>
-                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <p><b>CS251</b></p>
+                    <p class="w3-opacity">Computer Organization and Design</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs251').style.display='block'">View</button>
                   </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
                   <div class="w3-container w3-white">
-                    <p><b>San Francisco</b></p>
-                    <p class="w3-opacity">Sun 29 Nov 2016</p>
-                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
-                  </div>
-                </div>
-                <div class="w3-third w3-margin-bottom">
-                  <div class="w3-container w3-white">
-                    <p><b>Paris</b></p>
-                    <p class="w3-opacity">Sat 28 Nov 2016</p>
-                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
-                  </div>
-                </div>
-                <div class="w3-third w3-margin-bottom">
-                  <div class="w3-container w3-white">
-                    <p><b>San Francisco</b></p>
-                    <p class="w3-opacity">Sun 29 Nov 2016</p>
-                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <p><b>CS245</b></p>
+                    <p class="w3-opacity">Logic and Computation</p><br>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs245').style.display='block'">View</button>
                   </div>
                 </div>
               </div>
+              <div class="w3-row-padding w3-padding-8" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>CS246</b></p>
+                    <p class="w3-opacity">Object-Oriented Software Development</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs246').style.display='block'">View</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>CS136</b></p>
+                    <p class="w3-opacity">Elementary Algorithm Design and Data Abstraction</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs136').style.display='block'">View</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>CS116</b></p>
+                    <p class="w3-opacity">Intro to Computer Science 2</p><br>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs116').style.display='block'">View</button>
+                  </div>
+                </div>
+              </div>
+              <div class="w3-row-padding w3-padding-8" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>CS115</b></p>
+                    <p class="w3-opacity">Intro to Computer Science 1</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('cs115').style.display='block'">View</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- MATH Courses -->
+              <br><h4 class="w3-wide w3-center">&ltMathematics&gt</h4><br>
+              <div class="w3-row-padding w3-padding-8" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>MATH135</b></p>
+                    <p class="w3-opacity">Algebra for Honours Math</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('math135').style.display='block'">View</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>MATH137</b></p>
+                    <p class="w3-opacity">Calculus1 for Honours Math</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('math137').style.display='block'">View</button>
+                  </div>
+                </div>
+              </div>
+              <!-- BU Courses -->
+              <br><h4 class="w3-wide w3-center">&ltBusiness&gt</h4><br>
+              <div class="w3-row-padding w3-padding-8" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>BU111 (WLU)</b></p>
+                    <p class="w3-opacity">Intro to Business Organization</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'">View</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <div class="w3-container w3-white">
+                    <p><b>ECON120 (WLU)</b></p>
+                    <p class="w3-opacity">Intro to Microeconomics</p>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'">View</button>
+                  </div>
+                </div>
+              </div>
+              <br><br>
             </div>
         </div>
         <br>
         <!-- second button -->
         <div class="w3-accordion w3-light-grey">
-          <button onclick="myFunction2('section2')" class="w3-btn-block w3-left-align">
-          Open Section 1
+          <button onclick="myFunction2('section2')" class="w3-btn-block w3-left-align w3-black">
+            <p class="w3-large w3-text-light-grey"><i class="fa fa-book fa-fw w3-xlarge w3-text-teal"></i>     External Courses<i class="fa fa-bars fa-fw w3-xlarge w3-text-white w3-right"></i></p>
           </button>
             <div class="w3-accordion-content w3-container" id="section2">
               <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
@@ -121,7 +175,7 @@ body {font-family: "Lato", sans-serif}
                     <p><b>New York</b></p>
                     <p class="w3-opacity">Fri 27 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
                   </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
@@ -129,7 +183,7 @@ body {font-family: "Lato", sans-serif}
                     <p><b>Paris</b></p>
                     <p class="w3-opacity">Sat 28 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
                   </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
@@ -137,7 +191,7 @@ body {font-family: "Lato", sans-serif}
                     <p><b>San Francisco</b></p>
                     <p class="w3-opacity">Sun 29 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+                    <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
                   </div>
                 </div>
               </div>
@@ -147,22 +201,53 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-8">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-closebtn w3-padding-xlarge w3-xxlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
+  <!-- Math135 Modal -->
+  <div id="math135" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('math135').style.display='none'" class="w3-closebtn w3-xlarge w3-hover-text-grey">x</span>
+        <h2>MATH135</h2>
+      </div>
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-btn-block w3-teal w3-padding-12 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-btn w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        <h4><p class="w3-opacity">Algebra for Honours Mathematics</p></h4>
+        <h5>Tomato Soup <b>$2.50</b></h5>
+        <h5>Chicken Salad <b>$3.50</b></h5>
+        <h5>Bread and Butter <b>$1.00</b></h5>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Menu Modal -->
+  <div id="menu" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('menu').style.display='none'" class="w3-closebtn w3-xlarge w3-hover-text-grey">x</span>
+        <h1>Starters</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Tomato Soup <b>$2.50</b></h5>
+        <h5>Chicken Salad <b>$3.50</b></h5>
+        <h5>Bread and Butter <b>$1.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Main Courses</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Grilled Fish and Potatoes <b>$8.50</b></h5>
+        <h5>Italian Pizza <b>$5.50</b></h5>
+        <h5>Veggie Pasta <b>$4.00</b></h5>
+        <h5>Chicken and Potatoes <b>$6.50</b></h5>
+        <h5>Deluxe Burger <b>$5.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Desserts</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Fruit Salad <b>$2.50</b></h5>
+        <h5>Ice cream <b>$2.00</b></h5>
+        <h5>Chocolate Cake <b>$4.00</b></h5>
+        <h5>Cheese <b>$5.50</b></h5>
       </div>
     </div>
   </div>
@@ -175,7 +260,7 @@ body {font-family: "Lato", sans-serif}
 
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-large">
   <a href="https://www.facebook.com/michelle.h.yoo/" title="Michelle's Facebook Profile"><i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
   <a href="https://www.instagram.com/michellehy95/" title="Michelle's Instagram"><i class="fa fa-instagram w3-hover-text-purple"></i></a>
   <a href="https://twitter.com/michellehy95" title="Michelle's Twitter"><i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
@@ -185,19 +270,6 @@ body {font-family: "Lato", sans-serif}
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 7000);    
-}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
@@ -219,7 +291,7 @@ function myFunction2(id) {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
+var modal = document.getElementById('menu');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

@@ -7,11 +7,13 @@
     window.onload = function() {
       try {
         TagCanvas.Start('myCanvas','tags',{
-          textColour: '#ff0000',
-          outlineColour: '#ff00ff',
+          textColour: null,
+          textFont: null,
+          weight: true,
+          outlineColour: null,
           reverse: true,
-          depth: 0.8,
-          maxSpeed: 0.05
+          depth: 0.5,
+          maxSpeed: 0.017
         });
       } catch(e) {
         // something went wrong, hide the canvas container
@@ -30,6 +32,29 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+canvas { margin-bottom: 20px }
+ul.weighted {
+ float: left;
+ display: block;
+ overflow: auto;
+ padding: 20px;
+ margin: 0 10px 20px 0;
+ background-color: #fff;
+ border: 4px solid #aaa;
+ border-radius: 20px;
+ -moz-border-radius: 20px;
+}
+ul.weighted li { display: inline }
+ul.weighted li a { margin: 2px }
+.centred p { width: 320px; float: left; margin-left: 20px }
+.preright { float: left }
+.huge { font-family: Impact,sans-serif; font-size: 56px }
+.large { font-family: 'Arial Black',sans-serif; font-size: 40px }
+.medium { font-family: Verdana,sans-serif; font-size: 18px }
+.small { font-family: Georgia,sans-serif; font-size: 11px }
+a.red { color: #ff0000 }
+a.green { color: #008000 }
+a.purple { color: #800080 }
 </style>
 <body>
 
@@ -69,29 +94,11 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-
-
   <!-- Automatic Slideshow Images -->
   <!-- Wordcloud -->
   <div id="myCanvasContainer" class="mySlides w3-display-container w3-center">
-    <canvas width="1200" height="900" id="myCanvas">
-      <p>Anything in here will be replaced on browsers that support the canvas element</p>
+    <canvas width="1200" height="850" id="myCanvas" class="w3-center">
     </canvas>
-  </div>
-  <div id="tags">
-    <ul>
-      <li><a href="http://www.google.com" target="_blank">Google</a></li>
-      <li><a href="/fish">Fish</a></li>
-      <li><a href="/chips">Chips</a></li>
-      <li><a href="/salt">Salt</a></li>
-      <li><a href="/vinegar">Vinegar</a></li>
-      <li><a href="http://www.google.com" target="_blank">Google</a></li>
-      <li><a href="/fish">Fish</a></li>
-      <li><a href="/chips">Chips</a></li>
-      <li><a href="/salt">Salt</a></li>
-      <li><a href="/vinegar">Vinegar</a></li>
-    </ul>
   </div>
   <!-- images -->
   <div class="mySlides w3-display-container w3-center">
@@ -108,6 +115,48 @@ body {font-family: "Lato", sans-serif}
       <p><b>Description</b></p>    
     </div>
   </div>
+  <br>
+
+  <!-- list of tags -->
+  <div id="tags" class="centred">
+  <ul>
+    <li><a href="#" class="small">background</a></li>
+    <li><a href="#" class="large">canvas</a></li>
+    <li><a href="#" class="medium">chart</a></li>
+    <li><a href="#" class="small">charts</a></li>
+    <li><a href="#" class="huge">cloud</a></li>
+    <li><a href="#" class="red medium">clouds</a></li>
+    <li><a href="#" class="red small">example</a></li>
+    <li><a href="#" class="red medium">goat</a></li>
+    <li><a href="#" class="red small">goat1000</a></li>
+    <li><a href="#" class="red large">graph</a></li>
+    <li><a href="#" class="red medium">graphs</a></li>
+    <li><a href="#" class="red small">html</a></li>
+    <li><a href="#" class="red large">html5</a></li>
+    <li><a href="#" class="red medium">image</a></li>
+    <li><a href="#" class="green medium">javascript</a></li>
+    <li><a href="#" class="green medium">jpeg</a></li>
+    <li><a href="#" class="green small">jpegsaver</a></li>
+    <li><a href="#" class="green large">jquery</a></li>
+    <li><a href="#" class="green small">lib</a></li>
+    <li><a href="#" class="green medium">library</a></li>
+    <li><a href="#" class="green small">link</a></li>
+    <li><a href="#" class="green huge">php</a></li>
+    <li><a href="#" class="green small">plugin</a></li>
+    <li><a href="#" class="green medium">saver</a></li>
+    <li><a href="#" class="purple small">screensaver</a></li>
+    <li><a href="#" class="purple small">script</a></li>
+    <li><a href="#" class="purple huge">svg</a></li>
+    <li><a href="#" class="purple medium">svggraph</a></li>
+    <li><a href="#" class="purple huge"><span style="color: #000; font-family: 'Lucida Console',Monaco,monospace">tag</span></a></li>
+    <li><a href="#" class="purple small">tagcanvas</a></li>
+    <li><a href="#" class="purple small">tagcloud</a></li>
+    <li><a href="#" class="purple small">text</a></li>
+    <li><a href="#" class="purple small">word</a></li>
+
+  </ul>
+</div>
+
 
   <!-- ABOUT Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
@@ -116,38 +165,34 @@ body {font-family: "Lato", sans-serif}
     <br>
     <div class="w3-row-padding">
       <div class="w3-twothird">
-        <p class="w3-justify">I am a third year University of Waterloo student studying Computer Science and Statistics with Business option.<br><br>
-        I am passionate in learning about the evolving field of data science and machine learning. (To fulfill my interest, I have enrolled in relevant courses in school and solidified the foundation through various work experiences.) <br><br>
-        I have worked at MINDs Lab as a Data Scientist during a 12 month internship program. In this position I gained working knowledge on various data science and machine learning concepts such as Text Analytics, Data Mining, Deep Learning Classification, Natural Language Processing and Speech Recognition. Moreover, my co-op experience as an IT Business Analyst at TD Bank improved my understanding on IT and financial industry. This also allowed me to build communication skills and enhance my ability to adapt to dynamic enterprise environment.
+        <p class="w3-justify">I am a third year University of Waterloo student studying Computer Science and Statistics with Business option.</p><br>
+        <p class="w3-justify">I am passionate in learning about the evolving field of data science and machine learning. To fulfil my interest, I have enrolled in relevant courses both in school and through online resources. I have also been reading books and research papers in related areas to solidify the foundation. (Please check out my reviews on the courses, books and research articles.) </p><br>
+        <p class="w3-justify">My areas of interest include various data science and machine learning concepts such as Text Analytics, Data Mining, Deep Learning and Natural Language Processing.
         </p>
       </div>
       <div class="w3-third">
         <p class="w3-large"><b>Programming Proficiency</b></p>
         <p>Python</p>
         <div class="w3-progress-container w3-round-xlarge w3-small">
-          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:90%">
-            <div class="w3-center w3-text-white">90%</div>
+          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:95%">
           </div>
         </div>
         <br>
         <p>C++</p>
         <div class="w3-progress-container w3-round-xlarge w3-small">
-          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:80%">
-            <div class="w3-center w3-text-white">80%</div>
+          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:95%">
           </div>
         </div>
         <br>
         <p>R</p>
         <div class="w3-progress-container w3-round-xlarge w3-small">
-          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:75%">
-            <div class="w3-center w3-text-white">75%</div>
+          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:85%">
           </div>
         </div>
         <br>
         <p>Java</p>
         <div class="w3-progress-container w3-round-xlarge w3-small">
-          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:50%">
-            <div class="w3-center w3-text-white">50%</div>
+          <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:80%">
           </div>
         </div>
       </div>
@@ -200,60 +245,106 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide w3-center"><i class="glyphicon glyphicon-file w3-margin-right w3-xlarge w3-text-teal"></i>PROJECTS</h2>
       <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
-
+      
 
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
         <div class="w3-third w3-margin-bottom">
-          <img src="newyork.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <br>
+            <p><b>Chess Game (C++)</b></p>
+            <p class="w3-opacity">July 10 - July 24, 2016</p>
+            <p>Strategic traditional chess game with A.I. options</p>
+            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('chessproject').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="classroom.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
+            <br>
             <p><b>Paris</b></p>
             <p class="w3-opacity">Sat 28 Nov 2016</p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="sanfrancisco.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
+            <br>
+            <p><b>Coming Soon</b></p>
             <p class="w3-opacity">Sun 29 Nov 2016</p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            <button class="w3-btn w3-margin-bottom" class="w3-btn w3-hover-light-grey">View</button>
           </div>
         </div>
       </div>
+    <a href='MichelleYoo_resume.pdf' download>
+      <button class="w3-btn w3-right w3-light-grey w3-padding-large w3-section w3-hover-grey">
+        <i class="fa fa-download"></i> Download Resume
+      </button>
+    </a>
     </div>
   </div>
 
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-8">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-closebtn w3-padding-xlarge w3-xxlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
+  <!-- Chess Modal -->
+  <div id="chessproject" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('chessproject').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+        <h1>Chess Game (C++)</h1>
+      </div>
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-btn-block w3-teal w3-padding-12 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-btn w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        <a href="https://github.com/TimBaek/Chess" target="_blank">
+          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
+        </a>
+        <br>
+        <h5>• Developed Chess game with two partners as final project for academic coursework (attained 96%)</h5>
+        <h5>• Applied various design patterns, mostly focused on Model-View-Controller Pattern</h5>
+        <h5>• Implemented Computer(with up to AI level 3) and View(both Text and Graphic Displays) classes</h5>
+        <h5>• Co-operated with partners to implement Board(Model) class</h5>
+        <h5>• Designed UML diagram to to model the processes of the system</h5>
+        <br>
       </div>
     </div>
   </div>
+
+
+  <!-- Menu Modal -->
+  <div id="menu" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('menu').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+        <h1>Starters</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Tomato Soup <b>$2.50</b></h5>
+        <h5>Chicken Salad <b>$3.50</b></h5>
+        <h5>Bread and Butter <b>$1.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Main Courses</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Grilled Fish and Potatoes <b>$8.50</b></h5>
+        <h5>Italian Pizza <b>$5.50</b></h5>
+        <h5>Veggie Pasta <b>$4.00</b></h5>
+        <h5>Chicken and Potatoes <b>$6.50</b></h5>
+        <h5>Deluxe Burger <b>$5.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Desserts</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Fruit Salad <b>$2.50</b></h5>
+        <h5>Ice cream <b>$2.00</b></h5>
+        <h5>Chocolate Cake <b>$4.00</b></h5>
+        <h5>Cheese <b>$5.50</b></h5>
+      </div>
+    </div>
+  </div>
+
 
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -289,14 +380,15 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <a href="https://www.facebook.com/michelle.h.yoo/" title="Michelle's Facebook Profile"><i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
-  <a href="https://www.instagram.com/michellehy95/" title="Michelle's Instagram"><i class="fa fa-instagram w3-hover-text-purple"></i></a>
-  <a href="https://twitter.com/michellehy95" title="Michelle's Twitter"><i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
-  <a href="https://ca.linkedin.com/in/michelle-yoo-70865a88" title="Michelle's Linkedin Profile"><i class="fa fa-linkedin w3-hover-text-indigo"></i></a>
+  <a href="https://www.facebook.com/michelle.h.yoo/" title="Michelle's Facebook Profile" target="_blank"><i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
+  <a href="https://www.instagram.com/michellehy95/" title="Michelle's Instagram" target="_blank"><i class="fa fa-instagram w3-hover-text-purple"></i></a>
+  <a href="https://twitter.com/michellehy95" title="Michelle's Twitter" target="_blank"><i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
+  <a href="https://ca.linkedin.com/in/michelle-yoo-70865a88" title="Michelle's Linkedin Profile" target="_blank"><i class="fa fa-linkedin w3-hover-text-indigo"></i></a>
+  <a href="https://github.com/michellehy95" title="Michelle's Github" target="_blank"><i class="fa fa-github w3-hover-text-indigo"></i></a>
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
+// Automatic Slideshow - change image every 10 seconds
 var myIndex = 0;
 carousel();
 
@@ -309,7 +401,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 7000);    
+    setTimeout(carousel, 10000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -323,12 +415,18 @@ function myFunction() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
+var modal = document.getElementById('menu');
+var chessmodal = document.getElementById('chessproject');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+  if (event.target == chessmodal) {
+    chessmodal.style.display = "none";
+  }
 }
+
+
 </script>
 
 </body>
