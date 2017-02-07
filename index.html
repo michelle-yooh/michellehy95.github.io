@@ -49,12 +49,16 @@ ul.weighted li a { margin: 2px }
 .centred p { width: 320px; float: left; margin-left: 20px }
 .preright { float: left }
 .huge { font-family: Impact,sans-serif; font-size: 56px }
-.large { font-family: 'Arial Black',sans-serif; font-size: 40px }
-.medium { font-family: Verdana,sans-serif; font-size: 18px }
-.small { font-family: Georgia,sans-serif; font-size: 11px }
+.large { font-family: Impact,sans-serif; font-size: 40px }
+.medium { font-family: Impact,sans-serif; font-size: 18px }
+.small { font-family: Impact,sans-serif; font-size: 11px }
 a.red { color: #ff0000 }
 a.green { color: #008000 }
 a.purple { color: #800080 }
+a.darkbrown { color: #32292f }
+a.brown { color: #705d56 }
+a.darkteal { color: #70abaf }
+a.teal { color: #99e1d9 }
 </style>
 <body>
 
@@ -97,19 +101,19 @@ a.purple { color: #800080 }
   <!-- Automatic Slideshow Images -->
   <!-- Wordcloud -->
   <div id="myCanvasContainer" class="mySlides w3-display-container w3-center">
-    <canvas width="1200" height="850" id="myCanvas" class="w3-center">
+    <canvas width="1200" height="900" id="myCanvas" class="w3-center">
     </canvas>
   </div>
   <!-- images -->
   <div class="mySlides w3-display-container w3-center">
-    <img src="studying_filter.jpeg" style="width:100%">
+    <img src="images/studying_filter.jpeg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Title</h3>
       <p><b>Description</b></p>    
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="classroom_bw.jpeg" style="width:100%">
+    <img src="images/classroom_bw.jpeg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Title</h3>
       <p><b>Description</b></p>    
@@ -120,39 +124,38 @@ a.purple { color: #800080 }
   <!-- list of tags -->
   <div id="tags" class="centred">
   <ul>
-    <li><a href="#" class="small">background</a></li>
-    <li><a href="#" class="large">canvas</a></li>
-    <li><a href="#" class="medium">chart</a></li>
-    <li><a href="#" class="small">charts</a></li>
-    <li><a href="#" class="huge">cloud</a></li>
-    <li><a href="#" class="red medium">clouds</a></li>
-    <li><a href="#" class="red small">example</a></li>
-    <li><a href="#" class="red medium">goat</a></li>
-    <li><a href="#" class="red small">goat1000</a></li>
-    <li><a href="#" class="red large">graph</a></li>
-    <li><a href="#" class="red medium">graphs</a></li>
-    <li><a href="#" class="red small">html</a></li>
-    <li><a href="#" class="red large">html5</a></li>
-    <li><a href="#" class="red medium">image</a></li>
-    <li><a href="#" class="green medium">javascript</a></li>
-    <li><a href="#" class="green medium">jpeg</a></li>
-    <li><a href="#" class="green small">jpegsaver</a></li>
-    <li><a href="#" class="green large">jquery</a></li>
-    <li><a href="#" class="green small">lib</a></li>
-    <li><a href="#" class="green medium">library</a></li>
-    <li><a href="#" class="green small">link</a></li>
-    <li><a href="#" class="green huge">php</a></li>
-    <li><a href="#" class="green small">plugin</a></li>
-    <li><a href="#" class="green medium">saver</a></li>
-    <li><a href="#" class="purple small">screensaver</a></li>
-    <li><a href="#" class="purple small">script</a></li>
-    <li><a href="#" class="purple huge">svg</a></li>
-    <li><a href="#" class="purple medium">svggraph</a></li>
-    <li><a href="#" class="purple huge"><span style="color: #000; font-family: 'Lucida Console',Monaco,monospace">tag</span></a></li>
-    <li><a href="#" class="purple small">tagcanvas</a></li>
-    <li><a href="#" class="purple small">tagcloud</a></li>
-    <li><a href="#" class="purple small">text</a></li>
-    <li><a href="#" class="purple small">word</a></li>
+    <li><a href="#" class="teal small">Mathematics</a></li>
+    <li><a href="#" class="darkbrown medium">Linear Algebra</a></li>
+    <li><a href="#" class="darkteal medium">Computer Science</a></li>
+    <li><a href="#" class="brown small">Algorithms</a></li>
+    <li><a href="#" class="teal medium">Statistics</a></li>
+    <li><a href="#" class="darkbrown small">Probability</a></li>
+    <li><a href="#" class="teal medium">Business</a></li>
+    <li><a href="#" class="large darkbrown ">Data Science</a></li>
+    <li><a href="#" class="teal small">Supervised Learning</a></li>
+    <li><a href="#" class="teal medium">Data Analytics</a></li>
+    <li><a href="#" class="brown medium">Clustering</a></li>
+    <li><a href="#" class="teal small">Data Structures</a></li>
+    <li><a href="#" class="brown large">NLP</a></li>
+    <li><a href="#" class="teal medium">Visualization</a></li>
+    <li><a href="#" class="darkbrown medium">Artificial Intelligence</a></li>
+    <li><a href="#" class="darkteal huge">Machine Learning</a></li>
+    <li><a href="#" class="darkbrown small">Unsupervised Learning</a></li>
+    <li><a href="#" class="teal medium">Classification</a></li>
+    <li><a href="#" class="darkbrown small">R</a></li>
+    <li><a href="#" class="darkbrown medium">Neural Networks</a></li>
+    <li><a href="#" class="darkbrown small">Python</a></li>
+    <li><a href="#" class="darkteal medium">Hadoop</a></li>
+    <li><a href="#" class="darkbrown small">C++</a></li>
+    <li><a href="#" class="brown large">Text Analytics</a></li>
+    <li><a href="#" class="darkteal small">Java</a></li>
+    <li><a href="#" class="darkteal small">Regression</a></li>
+    <li><a href="#" class="teal medium">Data Engineering</a></li>
+    <li><a href="#" class="darkteal huge"><span style="color: #000; font-family: 'Lucida Console',Monaco,monospace">Deep Learning</span></a></li>
+    <li><a href="#" class="darkteal small">Random Forest</a></li>
+    <li><a href="#" class="brown small">K Means</a></li>
+    <li><a href="#" class="darkteal small">Support Vector Machine</a></li>
+    <li><a href="#" class="brown small">Distributed System</a></li>
 
   </ul>
 </div>
@@ -249,7 +252,7 @@ a.purple { color: #800080 }
 
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
         <div class="w3-third w3-margin-bottom">
-          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
+          <img src="images/chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
             <p><b>Chess Game (C++)</b></p>
@@ -259,7 +262,7 @@ a.purple { color: #800080 }
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
+          <img src="images/question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
             <p><b>Paris</b></p>
@@ -269,7 +272,7 @@ a.purple { color: #800080 }
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
+          <img src="images/question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
             <p><b>Coming Soon</b></p>
@@ -297,7 +300,7 @@ a.purple { color: #800080 }
       </div>
       <div class="w3-container">
         <a href="https://github.com/TimBaek/Chess" target="_blank">
-          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
+          <img src="images/chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
         </a>
         <br>
         <h5>• Developed Chess game with two partners as final project for academic coursework (attained 96%)</h5>
