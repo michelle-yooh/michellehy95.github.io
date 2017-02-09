@@ -21,7 +21,7 @@ body {font-family: "Lato", sans-serif}
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
   </li>
-  <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
+  <li><a href="index.html" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
   <li class="w3-hide-small"><a href="index.html#about" class="w3-padding-large">ABOUT</a></li>
   <li class="w3-hide-small"><a href="index.html#experience" class="w3-padding-large">EXPERIENCE</a></li>
   <li class="w3-hide-small"><a href="index.html#project" class="w3-padding-large">PROJECTS</a></li>
@@ -30,8 +30,8 @@ body {font-family: "Lato", sans-serif}
     <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="Reviews by HY">REVIEWS<i class="fa fa-caret-down"></i></a>     
     <div class="w3-dropdown-content w3-white w3-card-4">
       <a href="course.html">Courses</a>
-      <a href="research.html">Research Articles</a>
       <a href="book.html">Books</a>
+      <a href="research.html">Research Articles</a>
     </div>
   </li>
 </ul>
@@ -55,8 +55,8 @@ body {font-family: "Lato", sans-serif}
   <!-- The Course Section -->
 <div class="w3-black">
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-    <h2 class="w3-wide w3-center">RESEARCH ARTICLES REVIEW</h2>
-      <p class="w3-opacity w3-center"><i>&ltCourses offered at UW&gt</i></p><br>
+    <h2 class="w3-wide w3-center">RESEARCH ARTICLES</h2>
+      <p class="w3-opacity w3-center"><i>"I enjoy reading research papers which helps me keep up with the latest researches."</i></p><br>
 
         <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
           <div class="w3-third w3-margin-bottom">
@@ -64,7 +64,7 @@ body {font-family: "Lato", sans-serif}
               <p><b>New York</b></p>
               <p class="w3-opacity">Fri 27 Nov 2016</p>
               <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+              <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
             </div>
           </div>
           <div class="w3-third w3-margin-bottom">
@@ -72,7 +72,7 @@ body {font-family: "Lato", sans-serif}
               <p><b>Paris</b></p>
               <p class="w3-opacity">Sat 28 Nov 2016</p>
               <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">View</button>
+              <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('menu').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
             </div>
           </div>
         </div>
@@ -80,22 +80,36 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-8">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-closebtn w3-padding-xlarge w3-xxlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
+  <!-- Menu Modal -->
+  <div id="menu" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('menu').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+        <h1>Starters</h1>
+      </div>
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-btn-block w3-teal w3-padding-12 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-btn w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        <h5>Tomato Soup <b>$2.50</b></h5>
+        <h5>Chicken Salad <b>$3.50</b></h5>
+        <h5>Bread and Butter <b>$1.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Main Courses</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Grilled Fish and Potatoes <b>$8.50</b></h5>
+        <h5>Italian Pizza <b>$5.50</b></h5>
+        <h5>Veggie Pasta <b>$4.00</b></h5>
+        <h5>Chicken and Potatoes <b>$6.50</b></h5>
+        <h5>Deluxe Burger <b>$5.00</b></h5>
+      </div>
+      <div class="w3-container w3-black">
+        <h1>Desserts</h1>
+      </div>
+      <div class="w3-container">
+        <h5>Fruit Salad <b>$2.50</b></h5>
+        <h5>Ice cream <b>$2.00</b></h5>
+        <h5>Chocolate Cake <b>$4.00</b></h5>
+        <h5>Cheese <b>$5.50</b></h5>
       </div>
     </div>
   </div>
@@ -118,19 +132,7 @@ body {font-family: "Lato", sans-serif}
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 7000);    
-}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
@@ -152,7 +154,7 @@ function myFunction2(id) {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
+var modal = document.getElementById('menu');
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
