@@ -94,9 +94,6 @@ a.teal { color: #99e1d9 }
     <li><a class="w3-padding-large" href="#experience">EXPERIENCE</a></li>
     <li><a class="w3-padding-large" href="#project">PROJECTS</a></li>
     <li><a class="w3-padding-large" href="#contact">CONTACT</a></li>
-      <li class="w3-padding-large">
-    <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="Reviews by HY">REVIEWS<i class="fa fa-caret-down"></i></a>     
-  </li>
   </ul>
 </div>
 
@@ -105,10 +102,12 @@ a.teal { color: #99e1d9 }
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <!-- Automatic Slideshow Images -->
   <!-- Wordcloud -->
-  <div id="myCanvasContainer" class="mySlides w3-display-container w3-center">
-    <canvas width="750" height="750" id="myCanvas" class="w3-center">
-    </canvas>
-  </div>
+
+    <div id="myCanvasContainer" class="mySlides w3-display-container w3-center">
+      <canvas width="750" height="750" id="myCanvas" class="w3-center">
+      </canvas>
+    </div>
+  }
 
   <!-- list of tags -->
   <div id="tags" class="centred">
@@ -199,7 +198,7 @@ a.teal { color: #99e1d9 }
           <div class="w3-container">
             <br>
             <div class="w3-col" style="width:70%">
-              <a href="http://www.scotiabank.com/ca/en/0,1091,5,00.html" target="_blank"><img src="scotia.jpg" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
+              <a href="http://www.scotiabank.com/ca/en/0,1091,5,00.html" target="_blank"><img src="images/scotia.jpg" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
               <h5 class="w3-normal"><b>Data Engineer</b></h5>
               <h6 class="w3-normal">Scotiabank - Network Analytics &amp Machine Learning</h6>
             </div>
@@ -218,7 +217,7 @@ a.teal { color: #99e1d9 }
           </div>
           <div class="w3-container">
             <div class="w3-col" style="width:70%">
-              <a href="http://mindslab.ai" target="_blank"><img src="mindslab.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
+              <a href="http://mindslab.ai" target="_blank"><img src="images/mindslab.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
               <h5 class="w3-normal"><b>Data Scientist</b></h5>
               <h6 class="w3-normal">MINDs Lab - Analytics Technology Division</h6>
             </div>
@@ -237,7 +236,7 @@ a.teal { color: #99e1d9 }
           </div>
           <div class="w3-container">
             <div class="w3-col" style="width:70%">
-              <a href="http://mindslab.ai" target="_blank"><img src="mindslab.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
+              <a href="http://mindslab.ai" target="_blank"><img src="images/mindslab.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
               <h5 class="w3-normal"><b>Big Data Mangement Intern</b></h5>
               <h6 class="w3-normal">MINDs Lab - Analytics Technology Division</h6>
             </div>
@@ -256,7 +255,7 @@ a.teal { color: #99e1d9 }
           </div>
           <div class="w3-container">
             <div class="w3-col" style="width:70%">
-              <a href="https://www.tdcanadatrust.com/" target="_blank"><img src="td.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
+              <a href="https://www.tdcanadatrust.com/" target="_blank"><img src="images/td.png" alt="Image" class="w3-left w3-margin-right"" height="60" width="60"></a>
               <h5 class="w3-normal"><b>IT Business Analyst</b></h5>
               <h6 class="w3-normal">TD Bank - Debit Payment Team</h6>
             </div>
@@ -290,7 +289,7 @@ a.teal { color: #99e1d9 }
       
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
         <div class="w3-third w3-margin-bottom">
-          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
+          <img src="images/chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
             <p><b>Chess Game (C++)</b></p>
@@ -300,17 +299,17 @@ a.teal { color: #99e1d9 }
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
+          <img src="images/datafest.png" alt="DataFest" style="width:100%; height:50%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
-            <p><b>Coming Soon</b></p>
-            <p class="w3-opacity"><br><br></p>
-            <p><br></p>
-            <button class="w3-btn w3-margin-bottom" class="w3-btn w3-hover-light-grey">View</button>
+            <p><b>DataFest</b></p>
+            <p class="w3-opacity">May 5 - May 7, 2017</p>
+            <p>48-hour Data Hackathon<br><br></p>
+            <button class="w3-btn w3-margin-bottom" onclick="document.getElementById('datafest').style.display='block'" class="w3-btn w3-hover-light-grey">View</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
+          <img src="images/question.png" alt="Coming Soon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <br>
             <p><b>Coming Soon</b></p>
@@ -338,7 +337,7 @@ a.teal { color: #99e1d9 }
       </div>
       <div class="w3-container">
         <a href="https://github.com/TimBaek/Chess" target="_blank">
-          <img src="chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
+          <img src="images/chessboard.png" alt="Chess" style="width:100%" class="w3-hover-opacity">
         </a>
         <br>
         <h5>• Developed Chess game with two partners as final project for academic coursework (attained 96%)</h5>
@@ -351,6 +350,24 @@ a.teal { color: #99e1d9 }
     </div>
   </div>
 
+  <!-- DataFest Modal -->
+  <div id="datafest" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-black">
+        <span onclick="document.getElementById('datafest').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+        <h1>DataFest</h1>
+      </div>
+      <div class="w3-container">
+        <a href="https://github.com/michellehy95/DataFest" target="_blank">
+          <img src="images/datafest_full.png" alt="DataFest" style="width:100%" class="w3-hover-opacity">
+        </a>
+        <br><br>
+        <h5>• Received Honorable Mention in Data Hackathon sponsored by organizations such as Google, ASA and UWaterloo</h5>
+        <h5>• Analyzed Expedia data using Python to understand the various customer behavior patterns based on customer clicks and bookings</h5>
+        <br>
+      </div>
+    </div>
+  </div>
 
 
   <!-- The Contact Section -->
